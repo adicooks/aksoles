@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adi Cooks - Sneaker Store</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://www.dafontfree.net/embed/ZXVyb3N0aWxlLWV4dGVuZGVkLWJvbGQmZGF0YS8yNC9lLzEyMzg1OS9FdXJvc3RpbGVFeHRlbmRlZEJsYWNrLnR0Zg"
+        rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="aksoles.png" />
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="slide.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <div class="dropdown-content">
+                        <a href="nike.html">Nike</a>
+                        <a href="jordan.html">Jordan</a>
+                        <a href="misc.html">Yeezy</a>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                </li>
+                <li><a href=#about>About</a></li>
+                <li><a href=#Testimonials>Testimonials</a></li>
+                <li><a href=#contact>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="icons">
+        <div class="search">
+            <a target=_blank href="https://google.com">
+                <i class="fa fa-search" style="font-size: 40px;"></i>
+            </a>
+        </div>
+
+        <div class="cart">
+            <a href="cart.html">
+                <i class="fa fa-shopping-cart" style="font-size: 40px;"><span
+                        style="font-family:'MicroSquare'; color:white; "></span></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+    <div class="title">
+        <img src="img/aksoles.png">
+    </div>
+    <div class="home_header">
+        <h1>Summer <br> Collections <br> <span style="color: hsla(6, 100%, 66%, 1);">2023</span></h1>
+        <p class="shop-here"><span style="color: white; position: relative; top: -150px;">Find your kicks. </span></p>
+        <button>
+            Shop Now
+        </button>
+    </div>
+    <section class="home_pic">
+        <img src="img/shoe.png">
+    </section>
+
+    <section class="new" id="new">
+        <div class="news">
+            <h1>Popular <span style="color: hsla(6, 100%, 66%, 1);">Products</span></h1>
+            <div class="scroll-arrows">
+                <div class="scroll-arrow left-arrow">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <div class="scroll-arrow right-arrow">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="new-items">
+            <div class="new-item">
+                    <img src="img/needle.png">
+                <h6>Nike Dunk Low "Needlework"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$180</span> <br>
+                    <a class="atc" data-tag="needle" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/gardenia.png">
+                <h6>Nike Dunk Low "Gardenia"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$260</span> <br>
+                    <a class="atc" data-tag="gardenia" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/slag.png">
+                <h6>Nike Dunk Low <br> "SLAG"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$240</span> <br>
+                    <a class="atc" data-tag="slag" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/panda.png">
+                <h6>Nike Dunk Low <br> "Panda"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$175</span> <br>
+                    <a class="atc" data-tag="panda" href="#">Add to Cart</a>
+                </h6>
+            </div>
+            <div class="new2" style="display: none;">
+                <div class="new-item">
+                    <img src="img/needle.png">
+                <h6>Nike Dunk Low "Needlework"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$180</span> <br>
+                    <a class="atc" data-tag="needle" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/gardenia.png">
+                <h6>Nike Dunk Low "Gardenia"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$260</span> <br>
+                    <a class="atc" data-tag="gardenia" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/slag.png">
+                <h6>Nike Dunk Low <br> "SLAG"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$240</span> <br>
+                    <a class="atc" data-tag="slag" href="#">Add to Cart</a>
+                </h6>
+            </div>
+
+            <div class="new-item">
+                    <img src="img/panda.png">
+                <h6>Nike Dunk Low <br> "Panda"<br><span
+                        style=" font-size: 20px; position: relative; top: 5px">Size 9.5
+                        <br>$175</span> <br>
+                    <a class="atc" data-tag="panda" href="#">Add to Cart</a>
+                </h6>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <img class="abt_pic" src="img/about.png">
+        <p>About Us</p>
+        <h1>We Provide High Quality Shoes.</h1>
+        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </h3>
+    </section>
+
+    <section class="testimonial" id="Testimonials">
+        <h1>What Our <span style="color: hsla(6, 100%, 66%, 1);">Customers Say</span></h1>
+        <div class="tests">
+            <div class="test">
+                <img
+                    src="https://media.licdn.com/dms/image/D4E03AQGswIDFZGgYSA/profile-displayphoto-shrink_800_800/0/1690252298129?e=1695859200&v=beta&t=uF9N0AAzJBFLE9JH5gCM-uo0Z_DRgMuNc1FeCu5Acfc">
+                <h3>"Absolutely blown away by the incredible selection and top-notch customer service at this sneaker store! The staff's knowledge and passion for footwear made my shopping experience a delight, and the wide range of stylish, high-quality sneakers left me spoilt for choice. Five stars without a doubt!"
+                </h3>
+            </div>
+            <div class="test">
+                <img
+                    src="https://media.licdn.com/dms/image/D4E03AQGswIDFZGgYSA/profile-displayphoto-shrink_800_800/0/1690252298129?e=1695859200&v=beta&t=uF9N0AAzJBFLE9JH5gCM-uo0Z_DRgMuNc1FeCu5Acfc">
+                <h3>"I can't praise this sneaker store enough for its unbeatable combination of trendy designs and utmost comfort! From classic brands to the latest releases, their inventory caters to every taste and preference. With their friendly and attentive staff, I felt like a valued customer throughout, making it an outstanding five-star experience."
+
+                </h3>
+            </div>
+            <div class="test">
+                <img
+                    src="https://media.licdn.com/dms/image/D4E03AQGswIDFZGgYSA/profile-displayphoto-shrink_800_800/0/1690252298129?e=1695859200&v=beta&t=uF9N0AAzJBFLE9JH5gCM-uo0Z_DRgMuNc1FeCu5Acfc">
+                <h3>"A hidden gem for sneaker enthusiasts! This store goes above and beyond to keep up with the latest sneaker trends, offering a superbly curated collection of exclusive releases and limited editions. Impeccable service, and the staff's dedication to helping me find the perfect pair made my visit memorable. Hands down, a five-star haven for sneakerheads!"
+                </h3>
+            </div>
+            <div class="test">
+                <img
+                    src="https://media.licdn.com/dms/image/D4E03AQGswIDFZGgYSA/profile-displayphoto-shrink_800_800/0/1690252298129?e=1695859200&v=beta&t=uF9N0AAzJBFLE9JH5gCM-uo0Z_DRgMuNc1FeCu5Acfc">
+                <h3>"I'm thrilled with my recent purchase from this sneaker store! The seamless online shopping experience, combined with fast shipping and secure packaging, made it a breeze to get my hands on my dream kicks. The store's commitment to quality and their impeccable reputation in the sneaker community earns them a resounding five stars from me!"
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Contact Us & <span style="color: hsla(6, 100%, 66%, 1);">Sign Up</span></h1>
+        <div class="email-box">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Sign Up</button>
+        </div>
+    </section>
+
+</body>
+</html>

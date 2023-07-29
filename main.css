@@ -1,0 +1,745 @@
+@font-face {
+    font-family: MicroSquare;
+    src: url(MicroSquare_Regular.ttf);
+}
+
+@font-face {
+    font-family: MicroSquareBold;
+    src: url(MicroSquare_Bold.ttf);
+}
+
+
+body {
+    margin: 0;
+    overscroll-behavior: none;
+    background-image: url("img/test2.png");
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    font-family: 'MicroSquare', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    top: 0px;
+    font-size: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.fa.fa-search {
+    position: absolute;
+    top: 32.5px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    z-index: 2;
+}
+
+.fa.fa-shopping-cart {
+    position: absolute;
+    top: 32.5px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    z-index: 2;
+}
+
+.fa.fa-shopping-cart span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 45px;
+    top: 17px;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.fa.fa-search {
+    flex-basis: calc(20% - 60px);
+    margin: 10px 40px;
+    text-align: center;
+    right: 75px;
+}
+
+.fa.fa-shopping-cart {
+    flex-basis: calc(20% - 60px);
+    margin: 10px 40px;
+    text-align: center;
+    right: 0px;
+}
+
+.title img {
+    width: 275px;
+    position: absolute;
+    left: 5%;
+    top: 10px;
+}
+
+.home_header {
+    padding-left: 50px;
+}
+
+.home_header h1 {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    top: -100px;
+    font-family: 'MicroSquareBold';
+}
+
+.home_header p {
+    position: relative;
+    top: -25px;
+    font-family: 'Poppins';
+}
+
+.home_header button {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 20px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -moz-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -webkit-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    top: -200px;
+    font-family: 'MicroSquareBold';
+}
+
+.home_pic img {
+    position: relative;
+    left: 32.5vw;
+    top: -675px;
+    z-index: -1;
+    width: 60vw;
+}
+
+.news h1 {
+    width: 700px;
+    position: absolute;
+    left: 50px;
+    top: -150px;
+    font-size: 75px;
+    color: white;
+}
+
+.new {
+    position: absolute;
+    top: 125vh;
+}
+
+
+.new-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.new2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+
+.new-item {
+    flex-basis: calc(20% - 60px);
+    margin: 10px 40px;
+    text-align: center;
+}
+
+/* Add the blue to red gradient background with 0.75 opacity to each new item */
+.new-item {
+    background: linear-gradient(120deg, rgba(0, 123, 255, 0.4), rgba(255, 0, 0, 0.4));
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+/* Add the circle with the gradient and heart icon */
+.new-item::before {
+    content: '\f08a';
+    font-family: 'FontAwesome';
+    color: white;
+    width: 30px;
+    height: 30px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(150deg, hsla(6, 100%, 66%, 0.75) 30%, hsla(214, 80%, 64%, 0.75) 70%);
+    background: -moz-linear-gradient(150deg, hsla(6, 100%, 66%, 0.75) 30%, hsla(214, 80%, 64%, 0.75) 70%);
+    background: -webkit-linear-gradient(150deg, hsla(6, 100%, 66%, 0.75) 30%, hsla(214, 80%, 64%, 0.75) 70%);
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-item::before .fa-heart {
+    color: white;
+    font-size: 16px;
+}
+
+.new-item img {
+    width: 250px;
+}
+
+.new-item:hover {
+    border: 1px solid white;
+}
+
+.new-item h6 {
+    margin-top: 0px;
+    font-size: 24px;
+    color: white;
+    font-family: 'MicroSquareBold';
+}
+
+.new-item a {
+    color: white;
+    margin-top: 50px;
+}
+
+/* Style the "Add to Cart" link as a button with the blue to red gradient */
+.new-item a.atc {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: hsla(6, 100%, 66%, 1);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Add the cart icon to the "Add to Cart" link */
+.new-item a.atc::after {
+    content: ' \f07a';
+    /* Unicode for the cart icon from Font Awesome */
+    font-family: 'FontAwesome';
+    /* Font Awesome's font-family */
+    margin-right: 5px;
+}
+
+.scroll-arrows {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+.scroll-arrow {
+    width: 35px;
+    height: 35px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(180deg, hsla(6, 100%, 66%, 1) 30%, hsla(214, 80%, 64%, 1) 70%);
+    background: -moz-linear-gradient(180deg, hsla(6, 100%, 66%, 1) 30%, hsla(214, 80%, 64%, 1) 70%);
+    background: -webkit-linear-gradient(180deg, hsla(6, 100%, 66%, 1) 30%, hsla(214, 80%, 64%, 1) 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+    right: 25px;
+}
+
+.scroll-arrow.right-arrow {
+    background: hsla(214, 80%, 64%, 1) 70%;
+    background: linear-gradient(180deg, hsla(214, 80%, 64%, 1) 30%, hsla(6, 100%, 66%, 1) 70%);
+    background: -moz-linear-gradient(180deg, hsla(214, 80%, 64%, 1) 30%, hsla(6, 100%, 66%, 1) 70%);
+    background: -webkit-linear-gradient(180deg, hsla(214, 80%, 64%, 1) 30%, hsla(6, 100%, 66%, 1) 70%);
+}
+
+.scroll-arrow i {
+    color: white;
+}
+
+.about {
+    position: relative;
+    top: 110px;
+}
+
+.abt_pic {
+    position: relative;
+    width: 600px;
+}
+
+.about p {
+    font-size: 30px;
+    color: hsla(6, 100%, 66%, 1);
+}
+
+.about h1 {
+    font-size: 75px;
+    color: white;
+    width: 700px;
+    position: relative;
+    top: -75px;
+}
+
+.about h3 {
+    font-size: 15px;
+    color: white;
+    width: 500px;
+    text-align: justify;
+    font-family: 'Poppins';
+}
+
+.about p,
+.about h1,
+.about h3 {
+    position: relative;
+    left: 55%;
+    top: -500px;
+    margin-top: -20px;
+}
+
+
+.testimonial {
+    position: relative;
+    top: -275px;
+}
+
+.testimonial h1 {
+    font-size: 75px;
+    color: white;
+    position: relative;
+    left: 50px;
+}
+
+.tests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* Use space-around to create space between images */
+    margin: 10px;
+    position: relative;
+}
+
+.test img {
+    width: 200px;
+    margin: 0 20px;
+    /* Set left and right margins to 20 pixels each */
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+}
+
+.test h3 {
+    width: 250px;
+    margin: 0 20px;
+    /* Set left and right margins to 20 pixels each */
+    color: white;
+    text-align: justify;
+    font-family: 'Poppins';
+
+}
+
+.test {
+    text-align: center;
+}
+
+.contact {
+    position: absolute;
+    top: 3100px;
+    left: 50px;
+}
+
+.contact h1 {
+    font-size: 75px;
+    color: white
+}
+
+.email-box {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -145px;
+    left: 700px;
+}
+
+input[type="email"] {
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 16px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(150deg, hsla(6, 100%, 66%, 0.2) 30%, hsla(214, 80%, 64%, 0.2) 70%);
+    background: -moz-linear-gradient(150deg, hsla(6, 100%, 66%, 0.2) 30%, hsla(214, 80%, 64%, 0.2) 70%);
+    background: -webkit-linear-gradient(150deg, hsla(6, 100%, 66%, 0.2) 30%, hsla(214, 80%, 64%, 0.2) 70%);
+    height: 40px;
+    width: 25vw;
+    border-right: 0;
+    font-family: 'Poppins'
+}
+
+button[type="submit"] {
+    padding: 16.15px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -moz-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -webkit-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 125px;
+    font-family: 'Poppins';
+    color: white;
+}
+
+
+/*MEDIA QUERYS*/
+
+@media screen and (max-width: 1425px) {
+    .about {
+        position: relative;
+        top: 500px;
+    }
+
+    .testimonial {
+        position: relative;
+        top: 0px;
+    }
+
+    .contact {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 1175px) {
+
+    .home_pic img {
+        position: relative;
+        left: 40vw;
+    }
+
+    .about {
+        transform: translateY(100px);
+    }
+
+    .testimonial {
+        transform: translateY(200px);
+    }
+
+    .contact {
+        transform: translateY(250px);
+    }
+
+    .contact h1 {
+        font-size: 60px;
+    }
+
+    input[type="email"],
+    button[type="submit"] {
+        position: relative;
+        right: 150px;
+        transform: translateY(24.85px);
+    }
+
+    input[type="email"] {
+        width: 22.5vw;
+    }
+
+    .test {
+        margin-bottom: 75px;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    nav {
+        transform: translateX(100px);
+    }
+
+    .home_pic img {
+        transform: translateY(50px);
+    }
+
+    .new {
+        transform: translateY(-60px);
+    }
+
+    .abt_pic {
+        position: relative;
+        width: 500px;
+    }
+
+    .about h1,
+    .about p,
+    .about h3 {
+        transform: translateX(-100px);
+    }
+}
+
+@media screen and (max-width: 975px) {
+
+    .abt_pic {
+        position: relative;
+        width: 600px;
+        left: calc(50% - 300px)
+    }
+
+    .about h1,
+    .about p,
+    .about h3 {
+        transform: translate(-300px, 600px);
+    }
+
+    .testimonial,
+    .contact {
+        transform: translateY(775px)
+    }
+
+}
+
+@media screen and (max-width: 925px) {
+
+    nav {
+        transform: translate(35px, 75px);
+    }
+
+    .home_pic img {
+        width: 75vw;
+        left: 10vw;
+        transform: translateY(75px);
+    }
+
+    .home_header {
+        text-align: center;
+        transform: translateY(600px);
+    }
+
+    .new,
+    .about {
+        transform: translateY(500px);
+    }
+
+    .testimonial,
+    .contact {
+        transform: translateY(1200px);
+    }
+
+
+    .contact h1 {
+        text-align: center;
+    }
+
+    .email-box {
+        transform: translateY(125px);
+        left: 45vw;
+        margin-bottom: 100px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .testimonial h1 {
+        width: 600px
+    }
+
+    .home_pic img {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .home_pic img {
+        width: 90vw;
+        left: 3vw;
+        transform: translateY(125px);
+    }
+
+    .new-items,
+    .new2 {
+        justify-content: center;
+    }
+
+    .scroll-arrows {
+        transform: translateY(55px);
+    }
+
+    .about {
+        transform: translateY(1450px);
+    }
+
+    .contact,
+    .testimonial {
+        transform: translateY(2150px);
+    }
+
+    .contact {
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .about h1,
+    .about h3,
+    .about p {
+        padding-left: 25px;
+    }
+
+    .about h1,
+    .about p,
+    .about h3 {
+        width: 500px;
+        text-align: center;
+    }
+
+    .email-box {
+        width: 5000px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: black;
+        background-image: none;
+    }
+
+    nav {
+        position: relative;
+        right: 20px;
+    }
+    .home_pic {
+        transform: translateY(150px);
+    }
+    .home_header h1 {
+        font-size: 70px;
+        right: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home_header {
+        transform: translateY(400px);
+    }
+
+    .home_header p {
+        top: 20px;
+        right: 15px;
+    }
+
+    .home_header button {
+        top: -150px;
+        right: 15px;
+    }
+
+    .new {
+        top: 700px;
+    }
+
+    .new h1 {
+        width: 500px;
+        top: -250px;
+    }
+
+    .scroll-arrows {
+        transform: translate(-100px, 25px);
+    }
+    .new-items {
+        position: relative;
+        top: 30px;
+    }
+
+    .abt_pic {
+        width: 350px;
+        left: 0px;
+    }
+
+    .about h3 {
+        width: 300px;
+        left: 320px;
+    }
+}
