@@ -8,16 +8,14 @@
     src: url(MicroSquare_Bold.ttf);
 }
 
-
 body {
     margin: 0;
     overscroll-behavior: none;
     background-image: url("img/test2.png");
-    background-size: cover;
-    width: 100%;
-    background-attachment: fixed;
+    background-size: 100% 100vh; /* This will cover the whole page with a fixed height */
+    background-repeat: no-repeat; /* Prevent the gradient from repeating */
+    background-attachment: fixed; /* Keep the gradient fixed while scrolling */
     font-family: 'MicroSquare', sans-serif;
-    overflow-x: hidden;
 }
 
 nav {
@@ -233,10 +231,13 @@ nav a:hover {
 .price {
     width: 24.5%;
     position: relative;
+    left: 15px;
 }
 
 .quantity {
-    width: 37.5%
+    width: 37.5%;
+    position: relative;
+    left: 15px;
 }
 
 .total {
@@ -258,11 +259,12 @@ nav a:hover {
     justify-content: flex-end;
     width: 100%;
     padding: 10px 0;
+
 }
 
 .basketTotalTitle {
     width: 30%;
-    border: 1px solid black;
+    border: 1px solid white;
     border-right: transparent;
     padding: 5px;
     color: white;
@@ -270,13 +272,16 @@ nav a:hover {
 
 .basketTotal {
     width: 10%;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 15px;
     color: white;
 }
 
 button {
-    background-color: salmon;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -moz-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -webkit-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
     border: 3px solid white;
     color: #fff;
     display: inline-block;
@@ -290,11 +295,73 @@ button {
     text-align: center;
     display: flex;
     justify-content: center;
+    font-family: 'MicroSquare';
 
 }
 
 h3 {
     color: white;
+}
+
+.footer {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    top: 150px;
+}
+
+.footer span {
+    position: relative;
+    top: 40px;
+}
+
+.footer hr {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    position: relative;
+    top: 50px;
+    margin-bottom: 75px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a span {
+    display: none;
+}
+
+.social-icons a:hover span {
+    display: block;
+}
+
+.social-icons a:hover span {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    left: -22.5px;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -323,3 +390,23 @@ h3 {
     }
 
 }
+@media screen and (max-width: 500px) {
+
+    .title img {
+        width: 200px;
+        top: 20px;
+    }
+
+    nav {
+        position: relative;
+        top: 75px;
+        left: 15px;
+    }
+
+    button {
+        position: relative;
+        left: 40px;
+    }
+
+}
+

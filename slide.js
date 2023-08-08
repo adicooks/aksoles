@@ -1,14 +1,11 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the arrow elements
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
-    // Get the new-items and new2 elements
     const newItems = document.querySelector('.new-items');
     const new2 = document.querySelector('.new2');
+    const new3 = document.querySelector('.new3');
 
-    // Function to hide all items
     function hideAllItems() {
         const allItems = document.querySelectorAll('.new-item');
         allItems.forEach(item => {
@@ -23,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         item.style.display = 'block';
     });
 
+    let currentItems = 'new-items';
+
     // Add click event listener to left arrow
     leftArrow.addEventListener('click', function () {
         hideAllItems();
@@ -30,16 +29,37 @@ document.addEventListener('DOMContentLoaded', function () {
         itemsToShow.forEach(item => {
             item.style.display = 'block';
         });
-        new2.style.display = 'none'; // Hide .new2 on left arrow click
+        new2.style.display = 'none';
+        new3.style.display = 'none';
+        currentItems = 'new-items';
     });
 
     // Add click event listener to right arrow
     rightArrow.addEventListener('click', function () {
         hideAllItems();
-        const itemsToShow = new2.querySelectorAll('.new-item');
-        itemsToShow.forEach(item => {
-            item.style.display = 'block';
-        });
-        new2.style.display = 'flex'; // Show .new2 on right arrow click
+        if (currentItems === 'new-items') {
+            const itemsToShow = new2.querySelectorAll('.new-item');
+            itemsToShow.forEach(item => {
+                item.style.display = 'block';
+            });
+            new2.style.display = 'flex';
+            currentItems = 'new2';
+        } else if (currentItems === 'new2') {
+            const itemsToShow = new3.querySelectorAll('.new-item');
+            itemsToShow.forEach(item => {
+                item.style.display = 'block';
+            });
+            new3.style.display = 'flex';
+            currentItems = 'new3';
+        }
+        // Add a condition to prevent further action after new3 is shown
+        else if (currentItems === 'new3') {
+            const itemsToShow = newItems.querySelectorAll('.new-item');
+            itemsToShow.forEach(item => {
+                item.style.display = 'block';
+            });
+            newItems.style.display = 'flex';
+            currentItems = 'new-items';
+        }
     });
 });

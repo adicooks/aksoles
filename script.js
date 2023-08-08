@@ -2,34 +2,156 @@ window.onload = function () {
     let carts = document.querySelectorAll(".atc");
 
     let products = [
+        //nike
         {
             name: "Nike Dunk Low Needlework",
             tag: "needle",
-            price: 280,
-            size: 10,
+            price: 160,
+            size: 7,
             inCart: 0,
         },
         {
             name: "Nike Dunk Low Gardenia",
             tag: "gardenia",
-            price: 260,
-            size: 10,
+            price: 225,
+            size: 9.5,
             inCart: 0,
         },
         {
             name: "Nike Dunk Low SLAG",
             tag: "slag",
-            price: 240,
-            size: 10,
+            price: 200,
+            size: 9,
             inCart: 0,
         },
         {
             name: "Nike Dunk Low Panda",
             tag: "panda",
+            price: 150,
+            size: 11,
+            inCart: 0,
+        },
+        {
+            name: "Nike Dunk Low Ebay",
+            tag: "ebay",
+            price: 150,
+            size: 8.5,
+            inCart: 0,
+        },
+        {
+            name: "Nike Dunk Low Fuschia",
+            tag: "fuschia",
+            price: 175,
+            size: 7,
+            inCart: 0,
+        },
+        {
+            name: "Nike Air Force 1 Jackie Robinson",
+            tag: "jackie",
+            price: 300,
+            size: 11,
+            inCart: 0,
+        },
+        {
+            name: "Nike KD 15 B.A.D",
+            tag: "kd",
+            price: 290,
+            size: 11,
+            inCart: 0,
+        },
+
+        //jordan
+        {
+            name: "Air Jordan 1 Low Doernbecher",
+            tag: "riddhi",
+            price: 375,
+            size: 8.5,
+            inCart: 0,
+        },
+        {
+            name: "Air Jordan 3 Reimagined",
+            tag: "reimagined",
             price: 275,
             size: 10,
             inCart: 0,
-        }
+        },
+        {
+            name: "Air Jordan 4 Seafoam",
+            tag: "seafoam",
+            price: 250,
+            size: 5.5,
+            inCart: 0,
+        },
+        {
+            name: "Air Jordan 4 Craft",
+            tag: "craft",
+            price: 250,
+            size: 11,
+            inCart: 0,
+        },
+        {
+            name: "Air Jordan 4 Midnight Navy",
+            tag: "midnight",
+            price: 300,
+            size: 10.5,
+            inCart: 0,
+        },
+        {
+            name: "Air Jordan 4 Black Canvas",
+            tag: "canvas",
+            price: 375,
+            size: 12,
+            inCart: 0,
+        },
+        {
+            name: "Air Jordan 11 Cherry",
+            tag: "cherry",
+            price: 250,
+            size: 12,
+            inCart: 0,
+        },
+
+        //yeezy
+        {
+            name: "Adidas Yeezy Boost 350 Onyx",
+            tag: "onyx",
+            price: 275,
+            size: 9,
+            inCart: 0,
+        },
+
+        {
+            name: "Adidas Yeezy Boost 350 Pirate Black",
+            tag: "pirate",
+            price: 300,
+            size: 9,
+            inCart: 0,
+        },
+
+        {
+            name: "Adidas Yeezy Foam Runner Mx Cinder",
+            tag: "cinder",
+            price: 150,
+            size: 9,
+            inCart: 0,
+        },
+
+        {
+            name: "Adidas Yeezy Foam Runner Clay Taupe",
+            tag: "taupe",
+            price: 150,
+            size: 9,
+            inCart: 0,
+        },
+
+        {
+            name: "Adidas Yeezy Slide Onyx",
+            tag: "slide",
+            price: 150,
+            size: 9,
+            inCart: 0,
+        },
+
     ];
 
     for (let i = 0; i < carts.length; i++) {
@@ -137,12 +259,12 @@ window.onload = function () {
                   <div class="product-quantity">
                     <ion-icon name="caret-back-circle-outline" class="decrease-quantity" style="font-size: 24px; color: white;"></ion-icon>
                     <span class="quantity-value">${item.inCart}</span>
-                    <ion-icon name="caret-forward-circle-outline" class="increase-quantity" style="font-size: 2554px; color: white"></ion-icon>
+                    <ion-icon name="caret-forward-circle-outline" class="increase-quantity" style="font-size: 24px; color: white"></ion-icon>
                   </div>
                   <div class="product-total">$${(
                             item.inCart *
                             item.price *
-                            1.065
+                            1
                         ).toFixed(2)}</div>
                 </div>
               `;
