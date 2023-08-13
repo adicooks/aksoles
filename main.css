@@ -21,7 +21,6 @@ body::before {
     background-attachment: fixed;
     z-index: -1;
     transform: scaleY(-1);
-    /* Flip the background image vertically */
 }
 
 body {
@@ -29,6 +28,7 @@ body {
     overscroll-behavior: none;
     background-color: black;
     font-family: 'MicroSquare', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -397,6 +397,26 @@ nav a:hover {
     left: 55%;
     top: -500px;
     margin-top: -20px;
+}
+
+
+.about button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    background: hsla(6, 100%, 66%, 1);
+    background: linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -moz-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    background: -webkit-linear-gradient(120deg, hsla(6, 100%, 66%, 1) 10%, hsla(214, 80%, 64%, 1) 90%);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    font-family: 'MicroSquareBold';
+    border: 2px solid white;
+    font-size: 18px;
 }
 
 
